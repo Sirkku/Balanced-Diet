@@ -1,0 +1,14 @@
+{
+    "$schema": "https://moddbcdn.vintagestory.at/schema/modinfo.latest.json",
+    "type": "Code",
+    "modid": "balanceddiet",
+    "name": "BalancedDiet",
+    "authors": [
+        "Kvn"
+    ],
+    "description": "Adds bonus satiety to meals with multiple food types",
+    "version": "0.1.0",
+    "dependencies": {
+        "game": "1.22.7"
+    }
+}
