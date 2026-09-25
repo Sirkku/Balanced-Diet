@@ -43,11 +43,11 @@ namespace BalancedDiet
 
             if (components == 2)
             {
-                satietyBonus = 1.1f;
+                satietyBonus = BalancedDietModSystem.serverConfig.twoFoodCategorySatietyBonus;
             }
             else if (components > 2)
             {
-                satietyBonus = 1.2f;
+                satietyBonus = BalancedDietModSystem.serverConfig.threeFoodCategorySatietyBonus;
             }
 
             return satietyBonus;
