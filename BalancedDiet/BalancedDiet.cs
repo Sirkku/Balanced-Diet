@@ -38,19 +38,34 @@ namespace BalancedDiet
                         break;
                 }
             }
-            float satietyBonus = 1.0f;
             int components = hasFruit + hasVegetable + hasProtein + hasGrain + hasDairy;
 
             if (components == 2)
             {
-                satietyBonus = BalancedDietModSystem.serverConfig.twoFoodCategorySatietyBonus;
+                return BalancedDietModSystem.serverConfig.twoFoodCategorySatietyMultiplier;
             }
             else if (components > 2)
             {
-                satietyBonus = BalancedDietModSystem.serverConfig.threeFoodCategorySatietyBonus;
+                return BalancedDietModSystem.serverConfig.threeFoodCategorySatietyMultiplier;
             }
 
-            return satietyBonus;
+            return BalancedDietModSystem.serverConfig.oneFoodCategorySatietyMultiplier;
+        }
+
+        /**
+         * 1.1f -> +10%
+         * 0.9f -> -10%
+         */
+        public static string asPercentDiff(float multiplier)
+        {
+            if(multiplier >= 1.0f)
+            {
+                return String.Format("+{0}%", Math.Round((multiplier - 1.0f) * 100.0f));
+            }
+            else
+            {
+                return String.Format("{0}%", Math.Round((multiplier - 1.0f) * 100.0f));
+            }
         }
     }
 }

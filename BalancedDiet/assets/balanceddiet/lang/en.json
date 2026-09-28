@@ -1,3 +1,4 @@
 {
-    "hello": "hello world!"
+  "guide-page-title": "Game Mechanic: Balanced Diet",
+  "guide-page-text": "<strong>Balanced Diet</strong><br>Meals' satiety levels are scaled based on how many different food categories are included. The game lists fruit, vegetable, dairy, protein and grain. <br>1 Category: {0}<br>2 Categories: {1}<br>3 Categories: {2}"
 }
